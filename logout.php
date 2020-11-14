@@ -1,9 +1,10 @@
 <?php
-  session_start();
+session_start();
 
-  session_unset();
+unset($_SESSION['usuario']);
+unset($_SESSION['id']);
 
-  session_destroy();
+session_destroy();
 
-  header('Location: /php-login');
+header("Location: login.php");
 ?>
